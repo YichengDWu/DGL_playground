@@ -1,3 +1,9 @@
+"""
+References:
+Paper: https://arxiv.org/abs/1704.01212 
+Author’s code: https://github.com/brain-research/mpnn
+PyG implementation: https://pytorch-geometric.readthedocs.io/en/latest/_modules/torch_geometric/nn/conv/nn_conv.html#NNConv
+"""
 import torch
 import torch.nn as nn
 from torch.nn import Parameter
