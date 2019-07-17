@@ -1,3 +1,9 @@
+"""
+Reference
+Paper: https://arxiv.org/abs/1511.06391
+Author's code: https://github.com/LisaAnne/set2set
+PyG implementation: https://pytorch-geometric.readthedocs.io/en/latest/_modules/torch_geometric/nn/glob/set2set.html#Set2Set
+"""
 import torch
 import dgl
 from torch import tensor
