@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 17 20:48:30 2019
-
-@author: lenovo
-"""
 import os
 import pickle
 import zipfile
@@ -80,11 +74,11 @@ class HARDataset(object):
             users = har['user'].unique()
             classes = har['class'].unique()
             grouped = har.groupby(['user','class'])
-            self.labels = []
+            self.stgraphs, self.labels = [], []
             for u in users:
                 for c in classes:
                     print(f"Processing '{u}', '{c}'...")
-                    self.stgraphs = self.frames_to_stgraph(grouped.get_group((u, c)), u)
+                    self.stgraphs.append(self.frames_to_stgraph(grouped.get_group((u, c)), u))
                     self.labels.append(c)
             print("Loaded!")
         with open(self.store_path+'/stgraphs.pkl', "wb") as f:
